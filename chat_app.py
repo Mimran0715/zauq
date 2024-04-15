@@ -7,7 +7,7 @@ if "messages" not in st.session_state:
     st.session_state["messages"] = []
 
 def res_generator():
-    stream = ollama.chat(model="llama2", 
+    stream = ollama.chat(model="llava", 
                         messages=st.session_state["messages"],
                         stream=True)
     for chunk in stream:
